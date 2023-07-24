@@ -17,3 +17,5 @@ Colunas: stock_id (chave primária), name, description, company_fk, created_at e
 Colunas: user_id (chave primária), name, email, password, company_fk, created_at e DT.
 
 O conjunto de caracteres padrão é utf8mb4 e a colação é utf8_swedish_ci.
+
+Basta importar o banco de dados, ele já está com "Create Table"
