@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Movement;
+use App\Models\Product;
+use App\Models\Stock;
+
 use Illuminate\Http\Request;
 
 class MovementController extends Controller
@@ -14,7 +17,8 @@ class MovementController extends Controller
      */
     public function index()
     {
-        //
+        $movement = Movement::all();
+        return $movement;
     }
 
     /**
@@ -35,7 +39,8 @@ class MovementController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $product = Product::find($request->get("stock_sent"))->get("id");
+        dd($product);
     }
 
     /**
@@ -69,7 +74,7 @@ class MovementController extends Controller
      */
     public function update(Request $request, Movement $movement)
     {
-        //
+        
     }
 
     /**

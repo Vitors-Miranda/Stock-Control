@@ -14,7 +14,8 @@ class StockController extends Controller
      */
     public function index()
     {
-        //
+        $stock = Stock::All();
+        return $stock;
     }
 
     /**
@@ -35,7 +36,8 @@ class StockController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $stock = Stock::create($request->all());
+        return "Criado com sucesso!";
     }
 
     /**
@@ -46,7 +48,7 @@ class StockController extends Controller
      */
     public function show(Stock $stock)
     {
-        //
+        return $stock;
     }
 
     /**
@@ -69,7 +71,8 @@ class StockController extends Controller
      */
     public function update(Request $request, Stock $stock)
     {
-        //
+        $stock->update($request->all());
+        return "Atualizado com secesso!";
     }
 
     /**
@@ -80,6 +83,7 @@ class StockController extends Controller
      */
     public function destroy(Stock $stock)
     {
-        //
+        $stock->delete();
+        return "Deletado com secesso!";
     }
 }

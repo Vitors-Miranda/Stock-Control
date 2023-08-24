@@ -16,11 +16,11 @@ class CreateMovementsTable extends Migration
         Schema::create('movements', function (Blueprint $table) {
             $table->id();
             
-            $table->unsignedBigInteger("company_requested")
-            ->references("id")->on('companies');
+            $table->unsignedBigInteger("stock_requested")
+            ->references("id")->on('stocks');
 
-            $table->unsignedBigInteger("company_sent")
-            ->references("id")->on('companies');
+            $table->unsignedBigInteger("stock_sent")
+            ->references("id")->on('stock');
 
             $table->unsignedBigInteger("product_id")
             ->references("id")->on('products');

@@ -14,7 +14,8 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        //
+        $company = Company::All();
+        return $company;
     }
 
     /**
@@ -35,7 +36,8 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $company = Company::create($request->all());
+        return "Criado com sucesso!";
     }
 
     /**
@@ -46,7 +48,7 @@ class CompanyController extends Controller
      */
     public function show(Company $company)
     {
-        //
+        return $company;
     }
 
     /**
@@ -69,7 +71,8 @@ class CompanyController extends Controller
      */
     public function update(Request $request, Company $company)
     {
-        //
+        $company->update($request->all());
+        return "Atualizado com secesso!";
     }
 
     /**
@@ -80,6 +83,7 @@ class CompanyController extends Controller
      */
     public function destroy(Company $company)
     {
-        //
+        $company->delete();
+        return "Deletado com secesso!";
     }
 }

@@ -84,7 +84,6 @@ CREATE TABLE `stock` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci;
 
 -- --------------------------------------------------------
-
 --
 -- Estrutura para tabela `user`
 --
