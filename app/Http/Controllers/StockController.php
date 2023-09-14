@@ -37,7 +37,7 @@ class StockController extends Controller
     public function store(Request $request)
     {
         $stock = Stock::create($request->all());
-        return "Criado com sucesso!";
+        return ["message" => "Criado com sucesso!"];
     }
 
     /**
@@ -72,7 +72,7 @@ class StockController extends Controller
     public function update(Request $request, Stock $stock)
     {
         $stock->update($request->all());
-        return "Atualizado com secesso!";
+        return ["message" => "Atualizado com secesso!"];
     }
 
     /**
@@ -84,6 +84,6 @@ class StockController extends Controller
     public function destroy(Stock $stock)
     {
         $stock->delete();
-        return "Deletado com secesso!";
+        return ["message" => "Deletado com secesso!"];
     }
 }

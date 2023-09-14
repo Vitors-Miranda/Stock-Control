@@ -39,8 +39,8 @@ class MovementController extends Controller
      */
     public function store(Request $request)
     {
-        $product = Product::find($request->get("stock_sent"))->get("id");
-        dd($product);
+        // $product = Product::find($request->get("stock_sent"))->get("id");
+        // return $product
     }
 
     /**

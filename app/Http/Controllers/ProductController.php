@@ -37,7 +37,7 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $product = Product::create($request->all());
-        return "Criado com sucesso!";
+        return ["message" => "Criado com sucesso!"];
     }
 
     /**
@@ -72,7 +72,7 @@ class ProductController extends Controller
     public function update(Request $request, Product $product)
     {
         $product->update($request->all());
-        return "Atualizado com secesso!";
+        return ["message" => "Atualizado com secesso!"];
     }
 
     /**
@@ -84,6 +84,6 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         $product->delete();
-        return "Deletado com secesso!";
+        return ["message" => "Deletado com secesso!"];
     }
 }
